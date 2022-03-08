@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01927D6C445009C9D5D /* CustomTextField.swift */; };
+		DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */; };
+		DBAED01E27D6E8E9009C9D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */; };
 		DBD9868727D44F7E00AEDD3B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9868627D44F7E00AEDD3B /* FeedCell.swift */; };
 		DBD9868B27D4510E00AEDD3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD9868A27D4510E00AEDD3B /* Extensions.swift */; };
+		DBE0F43327D4820A0005D27D /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0F43227D4820A0005D27D /* LoginController.swift */; };
+		DBE0F43527D482160005D27D /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE0F43427D482160005D27D /* RegistrationController.swift */; };
 		DBEB3F4627D351F000002CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4527D351F000002CD0 /* AppDelegate.swift */; };
 		DBEB3F4827D351F000002CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4727D351F000002CD0 /* SceneDelegate.swift */; };
 		DBEB3F4A27D351F000002CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4927D351F000002CD0 /* ViewController.swift */; };
@@ -24,8 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DBAED01927D6C445009C9D5D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DBD9868627D44F7E00AEDD3B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		DBD9868A27D4510E00AEDD3B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = ../../../../../Downloads/Extensions.swift; sourceTree = "<group>"; };
+		DBE0F43227D4820A0005D27D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		DBE0F43427D482160005D27D /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		DBEB3F4227D351F000002CD0 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBEB3F4527D351F000002CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBEB3F4727D351F000002CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBE0F43027D481F70005D27D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				DBE0F43227D4820A0005D27D /* LoginController.swift */,
+				DBE0F43427D482160005D27D /* RegistrationController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		DBEB3F3927D351F000002CD0 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +104,7 @@
 				DBEB3F4E27D351F100002CD0 /* Assets.xcassets */,
 				DBEB3F5027D351F100002CD0 /* LaunchScreen.storyboard */,
 				DBEB3F5327D351F100002CD0 /* Info.plist */,
+				DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */,
 			);
 			path = InstagramClone;
 			sourceTree = "<group>";
@@ -92,6 +112,7 @@
 		DBEB3F5927D3521900002CD0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DBE0F43027D481F70005D27D /* Authentication */,
 				DBEB3F6127D352E600002CD0 /* MainTabController.swift */,
 				DBEB3F6327D3541B00002CD0 /* FeedController.swift */,
 				DBEB3F6527D3542700002CD0 /* SearchController.swift */,
@@ -120,6 +141,7 @@
 		DBEB3F5E27D3523400002CD0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -128,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD9868627D44F7E00AEDD3B /* FeedCell.swift */,
+				DBAED01927D6C445009C9D5D /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBEB3F5227D351F100002CD0 /* LaunchScreen.storyboard in Resources */,
+				DBAED01E27D6E8E9009C9D5D /* GoogleService-Info.plist in Resources */,
 				DBEB3F4F27D351F100002CD0 /* Assets.xcassets in Resources */,
 				DBEB3F4D27D351F000002CD0 /* Main.storyboard in Resources */,
 			);
@@ -210,10 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */,
 				DBEB3F4A27D351F000002CD0 /* ViewController.swift in Sources */,
+				DBE0F43327D4820A0005D27D /* LoginController.swift in Sources */,
 				DBD9868727D44F7E00AEDD3B /* FeedCell.swift in Sources */,
 				DBEB3F6827D3543F00002CD0 /* ImageSelectorController.swift in Sources */,
 				DBEB3F6A27D3545100002CD0 /* NotificationController.swift in Sources */,
+				DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */,
 				DBEB3F6627D3542700002CD0 /* SearchController.swift in Sources */,
 				DBEB3F4627D351F000002CD0 /* AppDelegate.swift in Sources */,
 				DBEB3F6C27D3545900002CD0 /* ProfileController.swift in Sources */,
@@ -221,6 +248,7 @@
 				DBEB3F6427D3541B00002CD0 /* FeedController.swift in Sources */,
 				DBEB3F6227D352E600002CD0 /* MainTabController.swift in Sources */,
 				DBEB3F4827D351F000002CD0 /* SceneDelegate.swift in Sources */,
+				DBE0F43527D482160005D27D /* RegistrationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +411,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jrose.InstagramClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrose.InstagramClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -412,7 +440,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = jrose.InstagramClone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrose.InstagramClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
