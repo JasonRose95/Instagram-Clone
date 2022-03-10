@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4E129AA0D604D49E531FE0FE /* Pods_InstagramClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 557798C2EF652540C2AEBB4F /* Pods_InstagramClone.framework */; };
+		DB76381927D6F2B400D43CD7 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76381827D6F2B400D43CD7 /* ImageUploader.swift */; };
+		DB76381B27D6F2BC00D43CD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76381A27D6F2BC00D43CD7 /* AuthService.swift */; };
+		DB8F826427D976F300D9978A /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F826327D976F300D9978A /* ProfileHeader.swift */; };
+		DB8F826727D97D8400D9978A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F826627D97D8400D9978A /* ProfileCell.swift */; };
 		DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01927D6C445009C9D5D /* CustomTextField.swift */; };
 		DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */; };
 		DBAED01E27D6E8E9009C9D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */; };
@@ -32,6 +36,10 @@
 /* Begin PBXFileReference section */
 		00001E187984408C1AB767B0 /* Pods-InstagramClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.release.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.release.xcconfig"; sourceTree = "<group>"; };
 		557798C2EF652540C2AEBB4F /* Pods_InstagramClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB76381827D6F2B400D43CD7 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		DB76381A27D6F2BC00D43CD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		DB8F826327D976F300D9978A /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		DB8F826627D97D8400D9978A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		DBAED01927D6C445009C9D5D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -82,8 +90,16 @@
 				FFFE63F58CB2F23EB2E24DBA /* Pods-InstagramClone.debug.xcconfig */,
 				00001E187984408C1AB767B0 /* Pods-InstagramClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DB8F826527D9770E00D9978A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DB8F826627D97D8400D9978A /* ProfileCell.swift */,
+				DB8F826327D976F300D9978A /* ProfileHeader.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DBE0F43027D481F70005D27D /* Authentication */ = {
@@ -159,6 +175,8 @@
 		DBEB3F5D27D3523200002CD0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DB76381827D6F2B400D43CD7 /* ImageUploader.swift */,
+				DB76381A27D6F2BC00D43CD7 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -174,6 +192,7 @@
 		DBEB3F5F27D3523500002CD0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB8F826527D9770E00D9978A /* Profile */,
 				DBD9868627D44F7E00AEDD3B /* FeedCell.swift */,
 				DBAED01927D6C445009C9D5D /* CustomTextField.swift */,
 			);
@@ -304,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */,
+				DB8F826427D976F300D9978A /* ProfileHeader.swift in Sources */,
 				DBEB3F4A27D351F000002CD0 /* ViewController.swift in Sources */,
 				DBE0F43327D4820A0005D27D /* LoginController.swift in Sources */,
 				DBD9868727D44F7E00AEDD3B /* FeedCell.swift in Sources */,
@@ -316,6 +336,9 @@
 				DBD9868B27D4510E00AEDD3B /* Extensions.swift in Sources */,
 				DBEB3F6427D3541B00002CD0 /* FeedController.swift in Sources */,
 				DBEB3F6227D352E600002CD0 /* MainTabController.swift in Sources */,
+				DB76381927D6F2B400D43CD7 /* ImageUploader.swift in Sources */,
+				DB8F826727D97D8400D9978A /* ProfileCell.swift in Sources */,
+				DB76381B27D6F2BC00D43CD7 /* AuthService.swift in Sources */,
 				DBEB3F4827D351F000002CD0 /* SceneDelegate.swift in Sources */,
 				DBE0F43527D482160005D27D /* RegistrationController.swift in Sources */,
 			);
