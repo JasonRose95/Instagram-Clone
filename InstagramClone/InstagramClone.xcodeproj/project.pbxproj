@@ -23,6 +23,7 @@
 		DBE1DE9927DC0C8400E21C4E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1DE9827DC0C8400E21C4E /* Constants.swift */; };
 		DBE1DE9B27DC0F5600E21C4E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1DE9A27DC0F5600E21C4E /* User.swift */; };
 		DBE1DE9D27DC137400E21C4E /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1DE9C27DC137400E21C4E /* ProfileHeaderViewModel.swift */; };
+		DBE1DE9F27DC26D500E21C4E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE1DE9E27DC26D500E21C4E /* UserCell.swift */; };
 		DBEB3F4627D351F000002CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4527D351F000002CD0 /* AppDelegate.swift */; };
 		DBEB3F4827D351F000002CD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4727D351F000002CD0 /* SceneDelegate.swift */; };
 		DBEB3F4A27D351F000002CD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F4927D351F000002CD0 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		DBEB3F6827D3543F00002CD0 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F6727D3543F00002CD0 /* ImageSelectorController.swift */; };
 		DBEB3F6A27D3545100002CD0 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F6927D3545100002CD0 /* NotificationController.swift */; };
 		DBEB3F6C27D3545900002CD0 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEB3F6B27D3545900002CD0 /* ProfileController.swift */; };
+		DBFA1F2027DD7B60001220BB /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA1F1F27DD7B60001220BB /* UserCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,7 @@
 		DBE1DE9827DC0C8400E21C4E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBE1DE9A27DC0F5600E21C4E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DBE1DE9C27DC137400E21C4E /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
+		DBE1DE9E27DC26D500E21C4E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		DBEB3F4227D351F000002CD0 /* InstagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBEB3F4527D351F000002CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBEB3F4727D351F000002CD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		DBEB3F6727D3543F00002CD0 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		DBEB3F6927D3545100002CD0 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		DBEB3F6B27D3545900002CD0 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		DBFA1F1F27DD7B60001220BB /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 		FFFE63F58CB2F23EB2E24DBA /* Pods-InstagramClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramClone.debug.xcconfig"; path = "Target Support Files/Pods-InstagramClone/Pods-InstagramClone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +200,7 @@
 			children = (
 				DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */,
 				DBE1DE9C27DC137400E21C4E /* ProfileHeaderViewModel.swift */,
+				DBFA1F1F27DD7B60001220BB /* UserCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				DB8F826527D9770E00D9978A /* Profile */,
 				DBD9868627D44F7E00AEDD3B /* FeedCell.swift */,
 				DBAED01927D6C445009C9D5D /* CustomTextField.swift */,
+				DBE1DE9E27DC26D500E21C4E /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +348,7 @@
 				DBEB3F6827D3543F00002CD0 /* ImageSelectorController.swift in Sources */,
 				DBEB3F6A27D3545100002CD0 /* NotificationController.swift in Sources */,
 				DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */,
+				DBE1DE9F27DC26D500E21C4E /* UserCell.swift in Sources */,
 				DBEB3F6627D3542700002CD0 /* SearchController.swift in Sources */,
 				DBEB3F4627D351F000002CD0 /* AppDelegate.swift in Sources */,
 				DBE1DE9B27DC0F5600E21C4E /* User.swift in Sources */,
@@ -349,6 +356,7 @@
 				DBE1DE9D27DC137400E21C4E /* ProfileHeaderViewModel.swift in Sources */,
 				DBE1DE9927DC0C8400E21C4E /* Constants.swift in Sources */,
 				DBD9868B27D4510E00AEDD3B /* Extensions.swift in Sources */,
+				DBFA1F2027DD7B60001220BB /* UserCellViewModel.swift in Sources */,
 				DBEB3F6427D3541B00002CD0 /* FeedController.swift in Sources */,
 				DBEB3F6227D352E600002CD0 /* MainTabController.swift in Sources */,
 				DB76381927D6F2B400D43CD7 /* ImageUploader.swift in Sources */,
