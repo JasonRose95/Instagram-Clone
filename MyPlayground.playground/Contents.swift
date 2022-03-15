@@ -1,31 +1,35 @@
 import UIKit
 
-func getMaxArea(_ height: [Int]) -> Int {
-    guard !height.isEmpty else { return -1 }
+let numbers = [1, 4, 6, 7, 10, 12, 18, 19, 23, 24, 34, 44, 58, 65]
+
+func binarySearch(array: [Int], key: Int) -> Bool {
     
-    var maxArea = 0
-    var left = 0
-    var right = height.count - 1
+    if array.count == 0 { return false }
     
-    while left < right {
-        //Re-calc maxArea
-        let minheight = min(height[left], height[right])
-        let currentHeight = minheight * (right - left)
-        
-        maxArea = max(maxArea, currentHeight)
-        //Move pointers
-        if height[left] < height[right] {
-            left += 1
-        } else{
-            right -= 1
-        }
+    let minIndex = 0
+    let maxIndex = array.count - 1
+    let midIndex = maxIndex/2
+    let midValue = array[midIndex]
+    
+    if key < array[minIndex] || key > array[maxIndex] {
+        return false
     }
     
-    return maxArea
+    if key > midValue{
+        let slice = Array(array[midIndex + 1...maxIndex])
+        return binarySearch(array: slice, key: key)
+    }
+    
+    if key < midValue{
+        let slice = Array(array[minIndex...midIndex - 1])
+        return binarySearch(array: slice, key: key)
+    }
+    
+    if key == midValue{
+        return true
+    }
+    
+    return false
 }
 
-let input = [1, 8, 6, 2, 5, 4, 8, 3, 7]
-let result = getMaxArea(input)
-print(result)
-
-
+binarySearch(array: numbers, key: 23)
