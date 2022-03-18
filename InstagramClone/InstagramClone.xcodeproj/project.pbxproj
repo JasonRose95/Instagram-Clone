@@ -15,6 +15,8 @@
 		DB97806B27E2B72000E53C34 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97806A27E2B72000E53C34 /* UploadPostController.swift */; };
 		DB97806D27E2B9B400E53C34 /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97806C27E2B9B400E53C34 /* InputTextView.swift */; };
 		DB97806F27E2C15100E53C34 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97806E27E2C15000E53C34 /* PostService.swift */; };
+		DB97807127E447DC00E53C34 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97807027E447DC00E53C34 /* Post.swift */; };
+		DB97807327E44B0800E53C34 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97807227E44B0800E53C34 /* PostViewModel.swift */; };
 		DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01927D6C445009C9D5D /* CustomTextField.swift */; };
 		DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */; };
 		DBAED01E27D6E8E9009C9D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */; };
@@ -52,6 +54,8 @@
 		DB97806A27E2B72000E53C34 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
 		DB97806C27E2B9B400E53C34 /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		DB97806E27E2C15000E53C34 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		DB97807027E447DC00E53C34 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DB97807227E44B0800E53C34 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		DBAED01927D6C445009C9D5D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		DBAED01D27D6E8E9009C9D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -210,6 +214,7 @@
 				DBAED01B27D6D01D009C9D5D /* AuthenticationViewModel.swift */,
 				DBE1DE9C27DC137400E21C4E /* ProfileHeaderViewModel.swift */,
 				DBFA1F1F27DD7B60001220BB /* UserCellViewModel.swift */,
+				DB97807227E44B0800E53C34 /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				DBE1DE9A27DC0F5600E21C4E /* User.swift */,
+				DB97807027E447DC00E53C34 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB97807327E44B0800E53C34 /* PostViewModel.swift in Sources */,
 				DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */,
 				DB8F826427D976F300D9978A /* ProfileHeader.swift in Sources */,
 				DB97806B27E2B72000E53C34 /* UploadPostController.swift in Sources */,
@@ -371,6 +378,7 @@
 				DBEB3F6427D3541B00002CD0 /* FeedController.swift in Sources */,
 				DBEB3F6227D352E600002CD0 /* MainTabController.swift in Sources */,
 				DB76381927D6F2B400D43CD7 /* ImageUploader.swift in Sources */,
+				DB97807127E447DC00E53C34 /* Post.swift in Sources */,
 				DB8F826727D97D8400D9978A /* ProfileCell.swift in Sources */,
 				DB97806F27E2C15100E53C34 /* PostService.swift in Sources */,
 				DBE1DE9727DC0C4C00E21C4E /* UserService.swift in Sources */,
