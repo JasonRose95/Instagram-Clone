@@ -7,15 +7,22 @@
 
 import UIKit
 
+protocol CommentInputAccessoryViewDelegate: AnyObject {
+    func inputView(_ inputView: CommentInputAccessoryView, wantsToUploadComment comment: String)
+}
+
 class CommentInputAccessoryView: UIView {
     
     //MARK: - Properties
+    
+    weak var delegate: CommentInputAccessoryViewDelegate?
     
     private let commentTextView: InputTextView = {
         let tv = InputTextView()
         tv.placeholderText = "Enter comment.."
         tv.font = UIFont.systemFont(ofSize: 15)
         tv.isScrollEnabled = false
+        tv.placeholderShouldCenter = true
         return tv
     }()
     
@@ -32,6 +39,9 @@ class CommentInputAccessoryView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        backgroundColor = .white
+        autoresizingMask = .flexibleHeight
         
         addSubview(postButton)
         postButton.anchor(top: topAnchor, right: rightAnchor, paddingRight: 8)
@@ -50,10 +60,21 @@ class CommentInputAccessoryView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var intrinsicContentSize: CGSize {
+        return .zero
+    }
     
     //MARK: - Actions
     
     @objc func handlePostTapped() {
-        
+        delegate?.inputView(self, wantsToUploadComment: commentTextView.text)
+    }
+    
+    //MARK: - Helpers
+    
+    func clearCommentTextView() {
+        commentTextView.text = nil
+        commentTextView.placeholderLabel.isHidden = false
     }
 }
+
