@@ -11,6 +11,8 @@
 		DB76381927D6F2B400D43CD7 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76381827D6F2B400D43CD7 /* ImageUploader.swift */; };
 		DB76381B27D6F2BC00D43CD7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76381A27D6F2BC00D43CD7 /* AuthService.swift */; };
 		DB819B0C27EC03540023E5FB /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB819B0B27EC03540023E5FB /* CommentService.swift */; };
+		DB819B0E27ED4DF70023E5FB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB819B0D27ED4DF70023E5FB /* Comment.swift */; };
+		DB819B1027ED51460023E5FB /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB819B0F27ED51460023E5FB /* CommentViewModel.swift */; };
 		DB8F826427D976F300D9978A /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F826327D976F300D9978A /* ProfileHeader.swift */; };
 		DB8F826727D97D8400D9978A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F826627D97D8400D9978A /* ProfileCell.swift */; };
 		DB97806B27E2B72000E53C34 /* UploadPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB97806A27E2B72000E53C34 /* UploadPostController.swift */; };
@@ -54,6 +56,8 @@
 		DB76381827D6F2B400D43CD7 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		DB76381A27D6F2BC00D43CD7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DB819B0B27EC03540023E5FB /* CommentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
+		DB819B0D27ED4DF70023E5FB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		DB819B0F27ED51460023E5FB /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		DB8F826327D976F300D9978A /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		DB8F826627D97D8400D9978A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		DB97806A27E2B72000E53C34 /* UploadPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostController.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				DBE1DE9C27DC137400E21C4E /* ProfileHeaderViewModel.swift */,
 				DBFA1F1F27DD7B60001220BB /* UserCellViewModel.swift */,
 				DB97807227E44B0800E53C34 /* PostViewModel.swift */,
+				DB819B0F27ED51460023E5FB /* CommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 			children = (
 				DBE1DE9A27DC0F5600E21C4E /* User.swift */,
 				DB97807027E447DC00E53C34 /* Post.swift */,
+				DB819B0D27ED4DF70023E5FB /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB819B1027ED51460023E5FB /* CommentViewModel.swift in Sources */,
 				DB97807327E44B0800E53C34 /* PostViewModel.swift in Sources */,
 				DBAED01A27D6C445009C9D5D /* CustomTextField.swift in Sources */,
 				DB8F826427D976F300D9978A /* ProfileHeader.swift in Sources */,
@@ -377,6 +384,7 @@
 				DBD9868727D44F7E00AEDD3B /* FeedCell.swift in Sources */,
 				DBEB3F6827D3543F00002CD0 /* ImageSelectorController.swift in Sources */,
 				DB819B0C27EC03540023E5FB /* CommentService.swift in Sources */,
+				DB819B0E27ED4DF70023E5FB /* Comment.swift in Sources */,
 				DBEB3F6A27D3545100002CD0 /* NotificationController.swift in Sources */,
 				DBAED01C27D6D01D009C9D5D /* AuthenticationViewModel.swift in Sources */,
 				DBE1DE9F27DC26D500E21C4E /* UserCell.swift in Sources */,
