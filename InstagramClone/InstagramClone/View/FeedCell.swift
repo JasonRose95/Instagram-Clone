@@ -9,6 +9,7 @@ import UIKit
 
 protocol FeedCellDelegate: AnyObject {
     func cell(_ cell: FeedCell, wantsToShowCommentsFor post: Post)
+    func cell(_ cell: FeedCell, didLike post: Post)
 }
 
 class FeedCell: UICollectionViewCell {
@@ -47,10 +48,11 @@ class FeedCell: UICollectionViewCell {
         return iv
     }()
     
-    private lazy var likeButton: UIButton = {
+     lazy var likeButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
         button.tintColor = .black
+        button.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         return button
     }()
     
@@ -136,6 +138,13 @@ class FeedCell: UICollectionViewCell {
         delegate?.cell(self, wantsToShowCommentsFor: viewModel.post)
     }
     
+    @objc func didTapLike() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        delegate?.cell(self, didLike: viewModel.post)
+    }
+    
     //MARK: - Helpers
     
     func configure() {
@@ -150,6 +159,9 @@ class FeedCell: UICollectionViewCell {
         usernameButton.setTitle(viewModel.username, for: .normal)
         
         likesLabel.text = viewModel.likesLabelText
+        likeButton.tintColor = viewModel.likeButtonTintColor
+        likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        
     }
     
     func configureActionButtons() {

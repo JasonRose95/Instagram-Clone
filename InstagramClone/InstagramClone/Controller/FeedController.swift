@@ -14,7 +14,9 @@ class FeedController: UICollectionViewController {
     
     //MARK: - Lifecycle
     
-    private var posts = [Post]()
+    private var posts = [Post]() {
+        didSet { collectionView.reloadData() }
+    }
     
     var post: Post?
     
@@ -52,10 +54,19 @@ class FeedController: UICollectionViewController {
         PostService.fetchPosts { posts in
             self.posts = posts
             self.collectionView.refreshControl?.endRefreshing()
-            self.collectionView.reloadData()
+            self.checkIfUserLikedPosts()
         }
     }
     
+    func checkIfUserLikedPosts() {
+        self.posts.forEach { post in
+            PostService.checkIfUserLikedPost(post: post) { didLike in
+                if let index = self.posts.firstIndex(where: {$0.postId == post.postId}) {
+                    self.posts[index].didLike = didLike
+                }
+            }
+        }
+    }
     //MARK: - Helpers
     
     func configureUI(){
@@ -65,9 +76,9 @@ class FeedController: UICollectionViewController {
         
         if post == nil {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout",
-                                                                style: .plain,
-                                                                target: self,
-                                                                action: #selector(handleLogout))
+                                                               style: .plain,
+                                                               target: self,
+                                                               action: #selector(handleLogout))
         }
         
         navigationItem.title = "Feed"
@@ -122,4 +133,24 @@ extension FeedController: FeedCellDelegate {
         let controller = CommentController(post: post)
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func cell(_ cell: FeedCell, didLike post: Post) {
+        cell.viewModel?.post.didLike.toggle()
+        
+        if post.didLike {
+            PostService.unlikePost(post: post) { _ in
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_unselected"), for: .normal)
+                cell.likeButton.tintColor = .black
+                cell.viewModel?.post.likes = post.likes - 1
+            }
+        } else {
+            PostService.likePost(post: post) { _ in
+                cell.likeButton.setImage(#imageLiteral(resourceName: "like_selected"), for: .normal)
+                cell.likeButton.tintColor = .red
+                cell.viewModel?.post.likes = post.likes + 1
+
+            }
+        }
+    }
 }
+
